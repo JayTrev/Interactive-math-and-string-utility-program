@@ -2,24 +2,24 @@
 #include <string>
 using namespace std;
 
-int main()
+int main() {
 
-    int coice;
+    int choice;
 
     //Main menu
     do {
         cout << "\n========= Interactive Utility Program =========\n";
-        cout << "1. Factoral calculator (while loop)\n";
+        cout << "1. Factorial calculator (while loop)\n";
         cout << "2. Number pyramid (for loop, nested loops)\n";
         cout << "3. Sum of even or odd numbers (do-while loop)\n";
         cout << "4. Reverse a string (while loop)\n";
-        cout << "Exit program\n";
+        cout << "5. Exit program\n";
         cout << "=================================================\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
-        // option 1. factoral calculator
-        if (coice ==1) {
+        // option 1. factorial calculator
+        if (choice ==1) {
             int N;
             cout << "Enter a positive integer:";
             cin >> N;
@@ -30,14 +30,14 @@ int main()
             }
 
             int i = 1;
-            unasigned long long factoral =1;
+            unsigned long long factorial =1;
 
             while (i <= N) {
-                factoral *= i;
+                factorial *= i;
                 i++;
             }
 
-            cout << "\nFactoral of " << N << " is: " << factoral << endl;
+            cout << "\nFactorial of " << N << " is: " << factorial << endl;
         }
 
         // choice 2: Number pyramid
@@ -48,7 +48,7 @@ int main()
 
             for (int i = 1; i <= rows; i++) {
                 for (int j = 1; j <= rows - i; j++) {
-                    cout " ";
+                    cout << " ";
                 }
 
                 for (int k = 1; k <= i; k++) {
@@ -58,7 +58,7 @@ int main()
             }
         }
 
-        // Coice 3; sum of even or odd numbers
+        // Choice 3; sum of even or odd numbers
         else if (choice == 3) {
             int type, N;
             cout << "Please select one:\n1. Sum of even numbers\n2. Sum of odd numbers\n";
@@ -85,9 +85,9 @@ int main()
             } while (i <= N);
 
             if (type == 1) {
-                cout << "Sum of even numbers up tp " << N << ": " << sum << endl;
+                cout << "Sum of even numbers up to " << N << ": " << sum << endl;
             } else if (type == 2) {
-                cout << "Sum of odd numbers up to " << N << ": " << sum << endl'
+                cout << "Sum of odd numbers up to " << N << ": " << sum << endl;
             } else {
              cout << "Invalid input, please choose 1 or 2.\n";
             }
@@ -97,22 +97,23 @@ int main()
             else if (choice == 4) {
             string str;
             cout << "Enter a string: ";
-            cin >> str;
+            cin.ignore();
+            getline(cin, str);
 
             string reversed = "";
             int i = str.length() - 1;
 
             while (i >= 0) {
-            reversed =+ str[i];
+            reversed += str[i];
             i--;
             }
 
-            cout << "reversed string; " << reversed << endl;
+            cout << "reversed string: " << reversed << endl;
             }
 
             //choice 5: Exit
             else if (choice == 5) {
-            cout << "Goodbyt! Thank you for using the program. \n";
+            cout << "Goodbye! Thank you for using the program. \n";
             }
 
             //Invalid choice selection
@@ -123,4 +124,4 @@ int main()
             } while (choice != 5); 
 
             return 0;
-            }
+}

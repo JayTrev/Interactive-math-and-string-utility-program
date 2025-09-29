@@ -58,7 +58,7 @@ int main() {
             }
         }
 
-        // Choice 3; sum of even or odd numbers
+        // Choice 3: sum of even or odd numbers
         else if (choice == 3) {
             int type, N;
             cout << "Please select one:\n1. Sum of even numbers\n2. Sum of odd numbers\n";
